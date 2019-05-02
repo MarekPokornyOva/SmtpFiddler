@@ -1,0 +1,20 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto">
+		<TextBlock Grid.Row="0" Grid.Column="0">From</TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="1">: </TextBlock>
+		<TextBlock Grid.Row="0" Grid.Column="2" Name="labelFrom">XXX</TextBlock>
+		<TextBlock Grid.Row="1" Grid.Column="0">To</TextBlock>
+		<TextBlock Grid.Row="1" Grid.Column="1">:</TextBlock>
+		<TextBlock Grid.Row="1" Grid.Column="2" Name="labelTo">XXX</TextBlock>
+		<TextBlock Grid.Row="2" Grid.Column="0">Cc</TextBlock>
+		<TextBlock Grid.Row="2" Grid.Column="1">:</TextBlock>
+		<TextBlock Grid.Row="2" Grid.Column="2" Name="labelCc">XXX</TextBlock>
+		<TextBlock Grid.Row="3" Grid.Column="0">Subject</TextBlock>
+		<TextBlock Grid.Row="3" Grid.Column="1">:</TextBlock>
+		<TextBlock Grid.Row="3" Grid.Column="2" Name="labelSubject">XXX</TextBlock>
+		<TextBlock Grid.Row="4" Grid.Column="0">Size</TextBlock>
+		<TextBlock Grid.Row="4" Grid.Column="1">:</TextBlock>
+		<TextBlock Grid.Row="4" Grid.Column="2" Name="labelSize">XXX</TextBlock>
+	</Grid>
+</UserControl>

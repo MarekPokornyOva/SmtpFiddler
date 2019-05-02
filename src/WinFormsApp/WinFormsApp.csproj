@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE966631-C594-4A41-A7E0-108317636590}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinFormsApp</RootNamespace>
+    <AssemblyName>SmtpFiddler</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\IconMain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Config.cs" />
+    <Compile Include="Core\FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\PageDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\PageDetail.Designer.cs">
+      <DependentUpon>PageDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ImportExport.cs" />
+    <Compile Include="Plugins\PageAttachments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\PageAttachments.Designer.cs">
+      <DependentUpon>PageAttachments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\PageHtml.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\PageHtml.Designer.cs">
+      <DependentUpon>PageHtml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Core.cs" />
+    <Compile Include="Core\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\PluginsLoader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\ReplyStatusChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\ReplyStatusChoose.Designer.cs">
+      <DependentUpon>ReplyStatusChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\PageText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\PageText.Designer.cs">
+      <DependentUpon>PageText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester.cs" />
+    <EmbeddedResource Include="Core\FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\PageDetail.resx">
+      <DependentUpon>PageDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\PageAttachments.resx">
+      <DependentUpon>PageAttachments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\PageHtml.resx">
+      <DependentUpon>PageHtml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Plugins\PageText.resx">
+      <DependentUpon>PageText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\ReplyStatusChoose.resx">
+      <DependentUpon>ReplyStatusChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconMain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLoad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSave.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconForward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconReplyStatus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconConfig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MpSoft.Net.Mail\MpSoft.Net.Mail.csproj">
+      <Project>{a668d130-60c8-4b0e-a0cd-0238b7161db1}</Project>
+      <Name>MpSoft.Net.Mail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

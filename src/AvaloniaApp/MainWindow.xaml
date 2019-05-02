@@ -1,0 +1,54 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SmtpFiddler" Background="Silver">
+	<Grid RowDefinitions="Auto,*">
+		<StackPanel Orientation="Horizontal">
+			<Button ToolTip.Tip="Server reply status" Name="toolStripButtonResponseStatus">
+				<Image Source="resm:AvaloniaApp.Resources.IconReplyStatus.ico"></Image>
+			</Button>
+			<StackPanel Orientation="Horizontal" IsVisible="false" Name="responsePanel">
+				<Button Name="toolStripMenuItemResponseOk" Tag="1">OK</Button>
+				<Button Name="toolStripMenuItemResponseAsk" Tag="0">Ask</Button>
+				<Button Name="toolStripMenuItemResponseMailboxUnavailable" Tag="2">Mailbox unavailable</Button>
+				<Button Name="toolStripMenuItemResponseInsufficientSystemStorage" Tag="3">Insufficient system storage</Button>
+				<Button Name="toolStripMenuItemResponseError" Tag="4">Error</Button>
+			</StackPanel>
+			<Button ToolTip.Tip="Forward messages" Name="toolStripButtonForwardMail">
+				<Image Source="resm:AvaloniaApp.Resources.IconForward.ico"></Image>
+			</Button>
+			<Button ToolTip.Tip="Save messages" Name="toolStripButtonSaveMessages">
+				<Image Source="resm:AvaloniaApp.Resources.IconSave.ico"></Image>
+			</Button>
+			<Button ToolTip.Tip="Load messages" Name="toolStripButtonLoadMessages">
+				<Image Source="resm:AvaloniaApp.Resources.IconLoad.ico"></Image>
+			</Button>
+			<Button ToolTip.Tip="Setup" Name="toolStripButtonConfiguration">
+				<Image Source="resm:AvaloniaApp.Resources.IconConfig.ico"></Image>
+			</Button>
+		</StackPanel>
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="150" MinWidth="100"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*" MinWidth="200"/>
+			</Grid.ColumnDefinitions>
+			<Grid RowDefinitions="*,Auto" Grid.Column="0">
+				<ListBox Background="Silver" Name="listViewMessages" Items="{Binding}"/>
+				<Button Name="btnTest" Content="Test" Grid.Row="1"/>
+			</Grid>
+			<GridSplitter Grid.Column="1"/>
+			<Grid RowDefinitions="Auto,*" Grid.Column="2">
+				<ComboBox Name="comboBoxViewSelect" SelectedIndex="0" Items="{Binding}"/>
+				<TabControl Name="tabControlMain" Grid.Row="1">
+					<TabItem Header="Detail" Name="tabPageDetail"/>
+					<TabItem Header="Plain" Name="tabPagePlain"/>
+					<!--TabItem Header="HTML" Name="tabPageHtml"/-->
+					<TabItem Header="Attachments" Name="tabPageAttachments"/>
+					<TabItem Header="Hex" Name="tabPageHex"/>
+					<TabItem Header="Raw" Name="tabPageRaw"/>
+					<TabItem Header="Protocol communication" Name="tabPageCommunication"/>
+				</TabControl>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

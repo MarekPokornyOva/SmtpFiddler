@@ -1,0 +1,7 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message" HasSystemDecorations="True" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Width="640" Height="480">
+	<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+		<TextBox TextWrapping="Wrap" Name = "textBoxContent" AcceptsReturn="True" IsReadOnly="True" />
+	</ScrollViewer>
+</Window>

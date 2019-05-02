@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Configuration" MaxWidth="150" MaxHeight="224" MinWidth="150" MinHeight="224"  HasSystemDecorations="True" ShowInTaskbar="False">
+	<Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20"/>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="*" MinWidth="100"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold" Name="groupBoxListen">Listen endpoint</TextBlock>
+		<TextBlock Grid.Row="1" Grid.Column="1" Name="labelListenAddress">Address</TextBlock>
+		<TextBox Grid.Row="1" Grid.Column="2" Name="textBoxListenAddress">0.0.0.0</TextBox>
+		<TextBlock Grid.Row="2" Grid.Column="1" Name="labelListenPort">Port</TextBlock>
+		<TextBox Grid.Row="2" Grid.Column="2" Name="textBoxListenPort">25</TextBox>
+		<TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold" Name="groupBoxForward">Forward</TextBlock>
+		<TextBlock Grid.Row="4" Grid.Column="1">Address</TextBlock>
+		<TextBox Grid.Row="4" Grid.Column="2" Name="textBoxForwardHost">127.0.0.1</TextBox>
+		<TextBlock Grid.Row="5" Grid.Column="1" Name="labelForwardPort">Port</TextBlock>
+		<TextBox Grid.Row="5" Grid.Column="2" Name="textBoxForwardPort">26</TextBox>
+		<TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold">Mode</TextBlock>
+		<RadioButton Grid.Row="7" Grid.Column="2" IsChecked="True" Name="radioButtonModeDummy">Dummy</RadioButton>
+		<RadioButton Grid.Row="8" Grid.Column="2" Name="radioButtonModeProxy">Proxy</RadioButton>
+		<StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+			<Button Name="buttonOk">OK</Button>
+			<Button Name="buttonCancel">Cancel</Button>
+		</StackPanel>
+	</Grid>
+</Window>

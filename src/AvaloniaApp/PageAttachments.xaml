@@ -1,0 +1,23 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Grid RowDefinitions="Auto,auto,*">
+		<ComboBox Name="comboBoxSelect" Items="{Binding}"/>
+		<Button Name="buttonSaveAs" Grid.Row="1">Save as...</Button>
+		<TabControl Name="tabControlAtt" Grid.Row="2">
+			<TabItem Header="Plain" Name="tabPagePlain">
+				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+					<TextBox Background="Silver" TextWrapping="Wrap" Name = "textBoxPlain" AcceptsReturn="True" IsReadOnly="True" />
+				</ScrollViewer>
+			</TabItem>
+			<!--TabItem Header="Html" Name="tabPageHtml"/-->
+			<TabItem Header="Image" Name="tabPageImage">
+				<Image Name="pictureBox"/>
+			</TabItem>
+			<TabItem Header="Hex" Name="tabPageHex">
+				<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+					<TextBox Background="Silver" TextWrapping="Wrap" Name = "textBoxHex" AcceptsReturn="True" IsReadOnly="True" />
+				</ScrollViewer>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</UserControl>

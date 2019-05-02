@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FormConfig.xaml" />
+    <None Remove="MessageBox.xaml" />
+    <None Remove="PageAttachments.xaml" />
+    <None Remove="PageDetail.xaml" />
+    <None Remove="PageText.xaml" />
+    <None Remove="ReplyStatusChoose.xaml" />
+    <None Remove="Resources\IconConfig.ico" />
+    <None Remove="Resources\IconForward.ico" />
+    <None Remove="Resources\IconLoad.ico" />
+    <None Remove="Resources\IconMain.ico" />
+    <None Remove="Resources\IconReplyStatus.ico" />
+    <None Remove="Resources\IconSave.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\IconConfig.ico" />
+    <EmbeddedResource Include="Resources\IconForward.ico" />
+    <EmbeddedResource Include="Resources\IconLoad.ico" />
+    <EmbeddedResource Include="Resources\IconMain.ico" />
+    <EmbeddedResource Include="Resources\IconReplyStatus.ico" />
+    <EmbeddedResource Include="Resources\IconSave.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.8.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.8.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MpSoft.Net.Mail\MpSoft.Net.Mail.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ReplyStatusChoose.xaml.cs">
+      <DependentUpon>ReplyStatusChoose.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PageAttachments.xaml.cs">
+      <DependentUpon>PageAttachments.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="ReplyStatusChoose.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FormConfig.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PageDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PageAttachments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PageText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

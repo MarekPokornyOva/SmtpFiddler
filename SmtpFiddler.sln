@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BEAA742C-ECE5-4044-8CE6-E0ECD3981288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MpSoft.Net.Mail", "src\MpSoft.Net.Mail\MpSoft.Net.Mail.csproj", "{A668D130-60C8-4B0E-A0CD-0238B7161DB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaApp", "src\AvaloniaApp\AvaloniaApp.csproj", "{F606803B-4AFF-4780-BD02-89C12713E250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp", "src\WinFormsApp\WinFormsApp.csproj", "{CE966631-C594-4A41-A7E0-108317636590}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE8FA3CC-9C08-4BC6-9BA6-EC9996B6F495}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A668D130-60C8-4B0E-A0CD-0238B7161DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A668D130-60C8-4B0E-A0CD-0238B7161DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A668D130-60C8-4B0E-A0CD-0238B7161DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A668D130-60C8-4B0E-A0CD-0238B7161DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F606803B-4AFF-4780-BD02-89C12713E250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F606803B-4AFF-4780-BD02-89C12713E250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F606803B-4AFF-4780-BD02-89C12713E250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F606803B-4AFF-4780-BD02-89C12713E250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE966631-C594-4A41-A7E0-108317636590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE966631-C594-4A41-A7E0-108317636590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE966631-C594-4A41-A7E0-108317636590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE966631-C594-4A41-A7E0-108317636590}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A668D130-60C8-4B0E-A0CD-0238B7161DB1} = {BEAA742C-ECE5-4044-8CE6-E0ECD3981288}
+		{F606803B-4AFF-4780-BD02-89C12713E250} = {BEAA742C-ECE5-4044-8CE6-E0ECD3981288}
+		{CE966631-C594-4A41-A7E0-108317636590} = {BEAA742C-ECE5-4044-8CE6-E0ECD3981288}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {366EE510-101B-465A-BEB1-C5785002676D}
+	EndGlobalSection
+EndGlobal
