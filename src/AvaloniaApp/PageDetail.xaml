@@ -1,5 +1,6 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaApp.PageDetail">
 	<Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto">
 		<TextBlock Grid.Row="0" Grid.Column="0">From</TextBlock>
 		<TextBlock Grid.Row="0" Grid.Column="1">: </TextBlock>

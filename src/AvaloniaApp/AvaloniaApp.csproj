@@ -34,8 +34,8 @@
     <EmbeddedResource Include="Resources\IconSave.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.8.0" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.8.0" />
+    <PackageReference Include="Avalonia" Version="0.9.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.11" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />

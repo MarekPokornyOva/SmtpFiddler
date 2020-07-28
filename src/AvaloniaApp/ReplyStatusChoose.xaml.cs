@@ -34,6 +34,12 @@ namespace AvaloniaApp
 			rbError).IsChecked=true;
 		}
 
+		[Obsolete("Don't use this constructor. It's just for compatibility with Avalonia framework.")]
+		public ReplyStatusChoose()
+		{
+			this.InitializeComponent();
+		}
+
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);

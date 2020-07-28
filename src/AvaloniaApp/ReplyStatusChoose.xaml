@@ -1,5 +1,6 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaApp.ReplyStatusChoose"
         Title="Choose action" MaxWidth="150" MaxHeight="224" MinWidth="150" MinHeight="224" HasSystemDecorations="false" ShowInTaskbar="False">
 	<Grid RowDefinitions="auto,auto,auto,auto">
 		<RadioButton Grid.Row="0" Tag="1" Name="rbOk">OK</RadioButton>

@@ -86,7 +86,7 @@ namespace AvaloniaApp
 			_smtpServer.MessageReceive += SimpleSmtpServer_MessageReceive;
 			_smtpServer.StartException += new SimpleSmtpServer.StartExceptionHandler(args => {
 				Avalonia.Threading.Dispatcher.UIThread.Post(() =>
-						MessageBox.Show(args.Exception.GetBaseException().Message)
+						MessageBox.Show(args.Exception.GetBaseException().Message,this)
 						);
 				//throw new ApplicationException("StartException", args.Exception);
 			});
@@ -94,7 +94,9 @@ namespace AvaloniaApp
 			_smtpServer.Start();
 
 			btnTest.IsVisible=false;
+			comboBoxViewSelect_SelectedIndexChanged_Active = false;
 			comboBoxViewSelect.SelectedIndex = 0;
+			comboBoxViewSelect_SelectedIndexChanged_Active=true;
 		}
 
 		private void MainWindow_Closed(object sender, EventArgs e)
@@ -187,7 +189,7 @@ namespace AvaloniaApp
 						}
 						catch (Exception ex)
 						{
-							MessageBox.Show("Error on save:\r\n" + ex.GetBaseException().Message);
+							MessageBox.Show("Error on save:\r\n" + ex.GetBaseException().Message,this);
 						}
 					});
 			});
@@ -207,7 +209,7 @@ namespace AvaloniaApp
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show("Error on load:\r\n"+ex.GetBaseException().Message);
+						MessageBox.Show("Error on load:\r\n"+ex.GetBaseException().Message,this);
 					}
 				});
 			});
@@ -322,7 +324,7 @@ namespace AvaloniaApp
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message);
+				MessageBox.Show(ex.Message,this);
 			}
 		}
 

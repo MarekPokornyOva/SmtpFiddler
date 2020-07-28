@@ -26,9 +26,9 @@ namespace AvaloniaApp
 			AvaloniaXamlLoader.Load(this);
 		}
 
-		public static void Show(string text)
+		public static void Show(string text,Window owner)
 		{
-			new MessageBox(text).ShowDialog(Application.Current.MainWindow);
+			new MessageBox(text).ShowDialog(owner);
 		}
 	}
 }

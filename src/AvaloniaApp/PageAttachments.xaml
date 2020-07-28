@@ -1,5 +1,6 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AvaloniaApp.PageAttachments">
 	<Grid RowDefinitions="Auto,auto,*">
 		<ComboBox Name="comboBoxSelect" Items="{Binding}"/>
 		<Button Name="buttonSaveAs" Grid.Row="1">Save as...</Button>
