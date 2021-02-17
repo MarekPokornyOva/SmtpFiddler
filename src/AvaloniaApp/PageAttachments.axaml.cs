@@ -13,13 +13,13 @@ namespace AvaloniaApp
 {
 	public class PageAttachments : UserControl, IMailView
 	{
-		ComboBox comboBoxSelect;
-		ObservableCollection<ComboBoxAttItem> comboBoxSelectList = new ObservableCollection<ComboBoxAttItem>();
-		Button buttonSaveAs;
-		TabControl tabControlAtt;
-		TabItem tabPagePlain /*,tabPageHtml*/, tabPageImage, tabPageHex;
-		Image pictureBox;
-		TextBox textBoxPlain, textBoxHex;
+		readonly ComboBox comboBoxSelect;
+		readonly ObservableCollection<ComboBoxAttItem> comboBoxSelectList = new ObservableCollection<ComboBoxAttItem>();
+		readonly Button buttonSaveAs;
+		readonly TabControl tabControlAtt;
+		readonly TabItem tabPagePlain /*,tabPageHtml*/, tabPageImage, tabPageHex;
+		readonly Image pictureBox;
+		readonly TextBox textBoxPlain, textBoxHex;
 
 		public PageAttachments()
 		{
@@ -82,7 +82,8 @@ namespace AvaloniaApp
 		{
 			if (pictureBox.Source != null)
 			{
-				pictureBox.Source.Dispose();
+				if (pictureBox.Source is IDisposable dis)
+					dis.Dispose();
 				pictureBox.Source = null;
 			}
 			if (bytes == null)
@@ -135,22 +136,20 @@ namespace AvaloniaApp
 			//pictureBox.Measure(new Size(childSizeX, childSizeY));
 			//Size desired = pictureBox.DesiredSize;
 
-
-			Stretch newMode = (pictureBox.Width > pictureBox.Source.PixelSize.Width) && (pictureBox.Height > pictureBox.Source.PixelSize.Height)
+			Stretch newMode = (pictureBox.Width > pictureBox.Source.Size.Width) && (pictureBox.Height > pictureBox.Source.Size.Height)
 				 ? Stretch.None
 				 : Stretch.Uniform;
 			if (pictureBox.Stretch != newMode)
 				pictureBox.Stretch = newMode;
 		}
 
-		SaveFileDialog saveFileDialog = new SaveFileDialog();
+		readonly SaveFileDialog saveFileDialog = new SaveFileDialog();
 		private void buttonSaveAs_Click(object sender, EventArgs e)
 		{
 			int selIndex = comboBoxSelect.SelectedIndex;
 			if (selIndex == -1)
 				return;
-			ComboBoxAttItem comboBoxAttItem = comboBoxSelectList[selIndex] as ComboBoxAttItem;
-			if (comboBoxAttItem == null)
+			if (!(comboBoxSelectList[selIndex] is ComboBoxAttItem comboBoxAttItem))
 				return;
 
 			saveFileDialog.InitialFileName = comboBoxAttItem.Name;

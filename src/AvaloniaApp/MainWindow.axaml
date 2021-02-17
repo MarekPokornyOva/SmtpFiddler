@@ -1,7 +1,7 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		  x:Class="AvaloniaApp.MainWindow"
-        Title="SmtpFiddler" Background="Silver">
+        Title="SmtpFiddler">
 	<Grid RowDefinitions="Auto,*">
 		<StackPanel Orientation="Horizontal">
 			<Button ToolTip.Tip="Server reply status" Name="toolStripButtonResponseStatus">
@@ -34,7 +34,7 @@
 				<ColumnDefinition Width="*" MinWidth="200"/>
 			</Grid.ColumnDefinitions>
 			<Grid RowDefinitions="*,Auto" Grid.Column="0">
-				<ListBox Background="Silver" Name="listViewMessages" Items="{Binding}"/>
+				<ListBox Name="listViewMessages" Items="{Binding}"/>
 				<Button Name="btnTest" Content="Test" Grid.Row="1"/>
 			</Grid>
 			<GridSplitter Grid.Column="1"/>

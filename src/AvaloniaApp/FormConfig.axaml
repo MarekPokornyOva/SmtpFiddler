@@ -1,7 +1,7 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="AvaloniaApp.FormConfig"
-        Title="Configuration" MaxWidth="150" MaxHeight="224" MinWidth="150" MinHeight="224"  HasSystemDecorations="True" ShowInTaskbar="False">
+        Title="Configuration" MaxWidth="165" MaxHeight="224" MinWidth="165" MinHeight="224" HasSystemDecorations="True" ShowInTaskbar="False">
 	<Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="20"/>
